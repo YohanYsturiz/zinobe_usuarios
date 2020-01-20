@@ -5,6 +5,9 @@
         }
     },
     "require": {
-        "illuminate/database": "^6.11"
+        "illuminate/database": "^6.11",
+        "zendframework/zend-diactoros": "^2.2",
+        "aura/router": "^3.1",
+        "twig/twig": "^3.0"
     }
 }
