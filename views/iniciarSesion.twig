@@ -1,0 +1,28 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <div class="col-6 mx-auto">
+        <h1>Iniciar Sesión</h1>
+        {% if (responseMessage) %}
+            <div class="alert alert-primary" role="alert">
+                {{ responseMessage }}
+            </div>
+        {% endif %}
+        <form class="form" action="/zinobe_usuarios/auth" method="POST">
+            <div class="form-row mt-3">
+                <div class="form-group col-md-12">
+                    <label for="email_usuario">Correo Electronico</label>
+                    <input type="email" name="email" id="email_usuario" class="form-control" placeholder="Correo Electronico">
+                </div>
+                <div class="form-group col-md-12">
+                    <label for="password_usuario">Contraseña</label>
+                    <input type="password" name="password" id="password_usuario" class="form-control" placeholder="Contraseña">
+                </div>
+            </div>
+            <div class="col-12">
+                <button type="submit" class="btn btn-primary">Guardar</button>
+            </div>
+        </form>
+    </div>
+{% endblock %}
+

@@ -4,6 +4,22 @@
     <div class="col-12 mt-3">
             <h1>Lista de Usuarios</h1>
     </div>
+
+    <div class="col-10 mx-auto">
+        <form action="/zinobe_usuarios/buscar" method="POST">
+            <div class="form-row align-items-center">
+                <div class="col-sm-6 my-1">
+                    <label class="sr-only" for="input-buscador">Nombre o Email</label>
+                    <input type="text" class="form-control" id="input-buscador" name="filtro" placeholder="Buscar por nombre o email">
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Buscar</button>
+                    <a href="/zinobe_usuarios/lista" class="btn btn-primary">Limpiar</a>
+
+                </div>
+            </div>
+        </form>
+    </div>
     
     <div class="col-10 mx-auto">
         <table class="table mt-3">

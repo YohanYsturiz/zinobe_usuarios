@@ -3,8 +3,15 @@
 {% block content %}
     <div class="col-10 mx-auto">
         <h1>Registro de Usuarios</h1>
+        
+        {% if (responseMessage) %}
+            <div class="alert alert-primary" role="alert">
+                {{ responseMessage }}
+            </div>
+        {% endif %}
+
         <form class="form" action="/zinobe_usuarios/usuario/store" method="post">
-            <div class="form-row">
+            <div class="form-row mt-3">
                 <div class="form-group col-md-6">
                     <label for="nombre_usuario">Nombre Completo</label>
                     <input type="text" name="nombre" id="nombre_usuario" class="form-control" placeholder="Nombre Completo">

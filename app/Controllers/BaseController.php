@@ -9,8 +9,10 @@
             $loader = new \Twig\Loader\FilesystemLoader('../views');
             $this->templateEngine = new \Twig\Environment($loader, [
                 'debug' => true,
-                'cache' => false,
+                'cache' => false
             ]);
+
+            $this->templateEngine->addGlobal("session", $_SESSION);
         }
     
         public function renderHtml($fileName, $data = []){
